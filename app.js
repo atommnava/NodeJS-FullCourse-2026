@@ -1,9 +1,11 @@
-const names = require('./4-names')
-const sayHi = require('./5-utils')
-const data = require('./6-alternative-flavor')
-//console.log(data)
+const path = require('path')
 
-require('./7-mind-grenade')
-sayHi(names.john)
-sayHi(names.atom)
-sayHi("Susan")
+console.log(path.sep);
+const filePath = path.join('/content/subfolder/test.txt')
+console.log(filePath)
+
+const base = path.basename(filePath)
+console.log(base)
+
+const absolute = path.resolve(__dirname, 'content', 'subfolder', 'text.txt')
+console.log(absolute)
